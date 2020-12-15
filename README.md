@@ -1,4 +1,4 @@
-# Amazon EventBridge - Partner Event integration example
+# Amazon EventBridge - Partner event integration example
 
 This example application creates an Amazon EventBridge event bus, an associated event rule, and a Lambda function. The SAM template accepts the external partner event source name as a parameter and creates these components. When the partner event source receives an event from a linked MongoDB database trigger, it triggers the rule and invokes a Lambda function that logs the payload into Amazon CloudWatch.
 
@@ -9,7 +9,7 @@ Important: this application uses various AWS services and there are costs associ
 ├── README.MD                   <-- This instructions file
 ├── myeventfunction             <-- Source code for a lambda function
 │   └── index.js                <-- Main Lambda handler
-├── samtemplate.yaml               <-- SAM template
+├── samtemplate.yaml            <-- SAM template
 ```
 
 ## Requirements
