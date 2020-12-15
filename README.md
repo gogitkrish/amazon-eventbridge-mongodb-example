@@ -30,13 +30,13 @@ Important: this application uses various AWS services and there are costs associ
 cd ./amazon-eventbridge-partnerevent-example
 sam deploy --guided
 ```
-Choose a stack name, select the desired AWS Region, and allow SAM to create roles with the required permissions. Once you have run guided mode once, you can use `sam deploy` in future to use these defaults.
+Choose a stack name, input the paratner event source name and allow SAM to create the event bus, rule, and Lambda function.
 
 ## How it works
 
-* Use the AWS CLI or AWS Lambda Console to invoke the Producer function. This places the events in `events.js` onto the default event bus in EventBridge.
+* When an event is generated in a linked partner source, e.g. record insert, delete, update in a MongoDB collection it triggers an event in the Amazon EventBridge event bus
 * The EventBridge rule specified in `template.yaml` filters the events based upon the criteria in the `EventPattern` section.
-* When the rule validates an event, it is routed to the Consumer function. This logs out the event, which you can see in CloudWatch Logs.
+* When the rule validates an event, it invokes the Lambda function. This logs the event, which you can see in CloudWatch Logs.
 
 ==============================================
 
