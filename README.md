@@ -21,16 +21,18 @@ Important: this application uses various AWS services and there are costs associ
 
 1. [Create an AWS account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html) if you do not already have one and login.
 
-1. [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [install the AWS Serverless Application Model CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html) on your local machine.
+2. [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [install the AWS Serverless Application Model CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html) on your local machine.
 
-1. Create a new directory, navigate to that directory in a terminal and enter ```https://github.com/aws-samples/amazon-eventbridge-producer-consumer-example```.
+3. Create partner event source by linking AWS with EventBridge partner (e.g. using MongoDB Atlas DB Trigger integration with EventBridge).
 
-1. From the command line, run:
+4. Create a new directory, navigate to that directory in a terminal and using command line clone the repository: ```git clone https://github.com/gogitkrish/amazon-eventbridge-partnerevent-example```.
+
+5. From the command line, run:
 ```
 cd ./amazon-eventbridge-partnerevent-example
 sam deploy --guided
 ```
-Choose a stack name, input the paratner event source name and allow SAM to create the event bus, rule, and Lambda function.
+Choose a stack name, input the paratner event source name, and allow SAM to create the event bus, rule, and Lambda function.
 
 ## How it works
 
